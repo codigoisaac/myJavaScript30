@@ -1,0 +1,54 @@
+html {
+  /* Colors  */
+  --color0: #0b0a07;
+  --color1: #e3b23c;
+  /*  */
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: var(--color0);
+}
+
+.keys {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.key {
+  border: 0.4rem solid var(--color1);
+  color: white;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem var(--color1);
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: var(--color1);
+  box-shadow: 0 0 1rem var(--color1);
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--color1);
+}
