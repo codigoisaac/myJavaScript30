@@ -12,25 +12,24 @@
       const ctx = canvas.getContext("2d");
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      ctx.strokeStyle = "#000";
       ctx.lineJoin = "round";
       ctx.lineCap = "round";
-      ctx.lineWidth = 0;
       // enable to add shadow
       // ctx.globalCompositeOperation = "multiply";
 
       let isDrawing = false;
       let lastX = 0;
       let lastY = 0;
-      let hue = 335;
+      let hue = 0;
       let direction = true;
 
       function draw(e) {
         if (!isDrawing) return;
-        console.log(e);
+
+        // change color
+        ctx.strokeStyle = `hsl(${hue}, 90%, 50%)`;
 
         // Draw!
-        ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
         ctx.beginPath();
         ctx.moveTo(lastX, lastY);
         ctx.lineTo(e.offsetX, e.offsetY);
@@ -64,6 +63,7 @@
       html,
       body {
         margin: 0;
+        background-color: black;
       }
     </style>
   </body>
