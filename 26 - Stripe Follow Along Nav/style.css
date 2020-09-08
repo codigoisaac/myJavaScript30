@@ -40,8 +40,8 @@ h2 {
 }
 
 nav {
-  position: relative;
-  perspective: 600px;
+  /* position: relative; */
+  /* perspective: 600px; */
 }
 
 .cool > li > a {
@@ -78,7 +78,7 @@ nav ul {
   border-radius: 2px;
   transition: all 0.5s;
   transform: translateY(100px);
-  will-change: opacity;
+  /* will-change: opacity; */
   display: none;
 }
 

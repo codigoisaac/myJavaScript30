@@ -3,6 +3,14 @@ const triggers = document.querySelectorAll(".cool > li");
 const bg = document.querySelector(".dropdownBackground");
 const nav = document.querySelector(".top");
 
+// Event Listeners
+triggers.forEach((trigger) =>
+  trigger.addEventListener("mouseenter", handleEnter)
+);
+triggers.forEach((trigger) =>
+  trigger.addEventListener("mouseleave", handleLeave)
+);
+
 // Functions
 function handleEnter() {
   // show content
@@ -38,11 +46,3 @@ function handleLeave() {
   this.classList.remove("trigger-enter", "trigger-enter-active");
   bg.classList.remove("open");
 }
-
-// Event Listeners
-triggers.forEach((trigger) =>
-  trigger.addEventListener("mouseenter", handleEnter)
-);
-triggers.forEach((trigger) =>
-  trigger.addEventListener("mouseleave", handleLeave)
-);
